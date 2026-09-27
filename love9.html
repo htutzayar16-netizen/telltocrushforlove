@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>A Little Something for my future husband ❤️</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background:
+        radial-gradient(circle at 50% 45%, #551437 0%, #25091d 35%, #09030a 100%);
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+
+/* --------------------------------
+   BACKGROUND GLOW
+-------------------------------- */
+
+.glow {
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    background: radial-gradient(
+        circle,
+        rgba(255, 70, 150, 0.25),
+        transparent 70%
+    );
+
+    filter: blur(30px);
+    animation: breathing 5s ease-in-out infinite;
+}
+
+@keyframes breathing {
+    0%,100% {
+        transform: translate(-50%, -50%) scale(0.9);
+        opacity: .6;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.15);
+        opacity: 1;
+    }
+}
+
+/* --------------------------------
+   FLOATING HEARTS
+-------------------------------- */
+
+.hearts {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.heart {
+    position: absolute;
+    bottom: -80px;
+
+    user-select: none;
+
+    opacity: 0;
+
+    filter:
+        drop-shadow(0 0 5px rgba(255, 80, 160, .8))
+        drop-shadow(0 0 15px rgba(255, 50, 130, .4));
+
+    animation:
+        rise linear infinite;
+}
+
+@keyframes rise {
+
+    0% {
+        transform:
+            translateY(0)
+            translateX(0)
+            rotate(0deg)
+            scale(.6);
+
+        opacity: 0;
+    }
+
+    10% {
+        opacity: .85;
+    }
+
+    40% {
+        transform:
+            translateY(-40vh)
+            translateX(35px)
+            rotate(100deg)
+            scale(1);
+    }
+
+    70% {
+        transform:
+            translateY(-75vh)
+            translateX(-40px)
+            rotate(230deg)
+            scale(.9);
+    }
+
+    100% {
+        transform:
+            translateY(-120vh)
+            translateX(50px)
+            rotate(360deg)
+            scale(1.3);
+
+        opacity: 0;
+    }
+}
+
+/* --------------------------------
+   PARTICLES
+-------------------------------- */
+
+.particles {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+
+    width: 3px;
+    height: 3px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 8px white,
+        0 0 15px #ff6ba9;
+
+    animation: twinkle 3s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+
+    0%,100% {
+        opacity: .1;
+        transform: scale(.5);
+    }
+
+    50% {
+        opacity: .9;
+        transform: scale(1.5);
+    }
+}
+
+/* --------------------------------
+   CENTER AREA
+-------------------------------- */
+
+.center {
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 20px;
+
+    z-index: 10;
+}
+
+/* --------------------------------
+   GLASS CARD
+-------------------------------- */
+
+.card {
+
+    width: min(620px, 92vw);
+
+    padding: 55px 45px;
+
+    border-radius: 35px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.12),
+            rgba(255,255,255,.035)
+        );
+
+    border: 1px solid rgba(255,255,255,.18);
+
+    backdrop-filter: blur(22px);
+
+    -webkit-backdrop-filter: blur(22px);
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.55),
+        inset 0 0 40px rgba(255,255,255,.025),
+        0 0 60px rgba(255,50,140,.12);
+
+    animation: cardAppear 1.5s cubic-bezier(.2,.8,.2,1);
+
+}
+
+@keyframes cardAppear {
+
+    from {
+        opacity: 0;
+        transform:
+            translateY(35px)
+            scale(.92);
+        filter: blur(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateY(0)
+            scale(1);
+        filter: blur(0);
+    }
+}
+
+/* --------------------------------
+   TOP HEART
+-------------------------------- */
+
+.bigHeart {
+
+    font-size: 45px;
+
+    margin-bottom: 18px;
+
+    display: inline-block;
+
+    filter:
+        drop-shadow(0 0 10px #ff4d91)
+        drop-shadow(0 0 25px #ff2378);
+
+    animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+
+    0%,100% {
+        transform: scale(1);
+    }
+
+    15% {
+        transform: scale(1.15);
+    }
+
+    30% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: scale(1.1);
+    }
+}
+
+/* --------------------------------
+   SMALL TITLE
+-------------------------------- */
+
+.label {
+
+    font-size: 11px;
+
+    letter-spacing: 5px;
+
+    color: #ff9bc7;
+
+    margin-bottom: 12px;
+
+    text-transform: uppercase;
+
+    opacity: .9;
+}
+
+/* --------------------------------
+   MAIN TITLE
+-------------------------------- */
+
+h1 {
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: clamp(55px, 10vw, 85px);
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    margin-bottom: 28px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #ffb1d4,
+            #ffffff
+        );
+
+    background-size: 200%;
+
+    -webkit-backgroundclip: text;
+
+    color: transparent;
+
+    animation: shine 4s linear infinite;
+
+    text-shadow:
+        0 0 25px rgba(255,100,170,.2);
+}
+
+@keyframes shine {
+
+    to {
+        background-position: 200%;
+    }
+}
+
+/* --------------------------------
+   MESSAGE
+-------------------------------- */
+
+.message {
+
+    min-height: 115px;
+
+    max-width: 500px;
+
+    margin: auto;
+
+    font-size: 16px;
+
+    line-height: 2;
+
+    font-weight: 300;
+
+    color: rgba(255,255,255,.82);
+
+}
+
+/* Cursor */
+
+.cursor {
+
+    color: #ff76ae;
+
+    animation: cursorBlink .7s infinite;
+}
+
+@keyframes cursorBlink {
+
+    50% {
+        opacity: 0;
+    }
+}
+
+/* --------------------------------
+   BUTTON
+-------------------------------- */
+
+.button {
+
+    margin-top: 25px;
+
+    padding: 14px 35px;
+
+    border: 1px solid rgba(255,255,255,.2);
+
+    border-radius: 100px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff4f9a,
+            #d81b65
+        );
+
+    color: white;
+
+    font-family: "Poppins";
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 30px rgba(255,30,120,.25);
+
+    transition:
+        transform .3s,
+        box-shadow .3s;
+}
+
+.button:hover {
+
+    transform:
+        translateY(-4px)
+        scale(1.04);
+
+    box-shadow:
+        0 15px 40px rgba(255,30,120,.45);
+}
+
+/* --------------------------------
+   SECRET MESSAGE
+-------------------------------- */
+
+.secret {
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    margin-top: 0;
+
+    transition:
+        max-height 1s ease,
+        opacity 1s ease,
+        margin .7s ease;
+}
+
+.secret.show {
+
+    max-height: 150px;
+
+    opacity: 1;
+
+    margin-top: 25px;
+}
+
+.secretText {
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 32px;
+
+    color: #ffb1d4;
+
+    text-shadow:
+        0 0 15px rgba(255,80,160,.5);
+}
+
+/* --------------------------------
+   MOBILE
+-------------------------------- */
+
+@media(max-width:600px) {
+
+    .card {
+        padding: 45px 25px;
+    }
+
+    .message {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    h1 {
+        font-size: 58px;
+    }
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- Background glow -->
+<div class="glow"></div>
+
+<!-- Floating hearts -->
+<div class="hearts" id="hearts"></div>
+
+<!-- Stars / particles -->
+<div class="particles" id="particles"></div>
+
+
+<!-- EVERYTHING BELOW STAYS PERFECTLY CENTERED -->
+
+<div class="center">
+
+    <div class="card">
+
+        <div class="bigHeart">❤️</div>
+
+        <div class="label">
+            A little message for you
+        </div>
+
+        <h1>Hey, You...</h1>
+
+        <div
+            class="message"
+            id="message">
+        </div>
+
+        <button
+            class="button"
+            onclick="reveal()">
+
+            There's more... 💗
+
+        </button>
+
+        <div
+            class="secret"
+            id="secret">
+
+            <div class="secretText">
+
+                I really like you. ❤️
+
+            </div>
+
+            <p>
+                I just wanted you to know.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+/* =========================================
+   FLOATING HEART SYSTEM
+========================================= */
+
+const hearts =
+document.getElementById("hearts");
+
+const heartTypes = [
+    "❤️",
+    "💗",
+    "💕",
+    "💖",
+    "💓",
+    "💞",
+    "💘",
+    "💝"
+];
+
+for(let i = 0; i < 90; i++){
+
+    const heart =
+    document.createElement("div");
+
+    heart.className = "heart";
+
+    heart.innerHTML =
+        heartTypes[
+            Math.floor(
+                Math.random() *
+                heartTypes.length
+            )
+        ];
+
+    heart.style.left =
+        Math.random() * 100 + "%";
+
+    heart.style.fontSize =
+        (12 + Math.random() * 28) + "px";
+
+    heart.style.animationDuration =
+        (6 + Math.random() * 9) + "s";
+
+    heart.style.animationDelay =
+        Math.random() * 10 + "s";
+
+    hearts.appendChild(heart);
+}
+
+
+/* =========================================
+   PARTICLES
+========================================= */
+
+const particles =
+document.getElementById("particles");
+
+for(let i = 0; i < 70; i++){
+
+    const particle =
+    document.createElement("div");
+
+    particle.className = "particle";
+
+    particle.style.left =
+        Math.random() * 100 + "%";
+
+    particle.style.top =
+        Math.random() * 100 + "%";
+
+    particle.style.animationDelay =
+        Math.random() * 4 + "s";
+
+    particle.style.animationDuration =
+        (2 + Math.random() * 4) + "s";
+
+    particles.appendChild(particle);
+}
+
+
+/* =========================================
+   CINEMATIC TYPING EFFECT
+========================================= */
+
+const text =
+"Some people enter your life quietly, and somehow they become the person you think about without even realizing it. You became that person for me.";
+
+const message =
+document.getElementById("message");
+
+let i = 0;
+
+function typing(){
+
+    if(i < text.length){
+
+        message.innerHTML =
+            text.substring(0, i + 1) +
+            '<span class="cursor">|</span>';
+
+        i++;
+
+        setTimeout(
+            typing,
+            38
+        );
+
+    }else{
+
+        message.innerHTML =
+            text +
+            '<span class="cursor">|</span>';
+    }
+}
+
+setTimeout(
+    typing,
+    1500
+);
+
+
+/* =========================================
+   SECRET REVEAL
+========================================= */
+
+function reveal(){
+
+    const secret =
+    document.getElementById("secret");
+
+    secret.classList.add("show");
+
+    heartExplosion();
+
+}
+
+
+/* =========================================
+   HEART EXPLOSION
+========================================= */
+
+function heartExplosion(){
+
+    for(let i = 0; i < 35; i++){
+
+        const heart =
+        document.createElement("div");
+
+        heart.innerHTML =
+            heartTypes[
+                Math.floor(
+                    Math.random() *
+                    heartTypes.length
+                )
+            ];
+
+        heart.style.position =
+            "fixed";
+
+        heart.style.left =
+            "50%";
+
+        heart.style.top =
+            "50%";
+
+        heart.style.zIndex =
+            "100";
+
+        heart.style.fontSize =
+            (15 + Math.random() * 25) + "px";
+
+        heart.style.pointerEvents =
+            "none";
+
+        const angle =
+            Math.random() *
+            Math.PI * 2;
+
+        const distance =
+            100 + Math.random() * 350;
+
+        const x =
+            Math.cos(angle) * distance;
+
+        const y =
+            Math.sin(angle) * distance;
+
+        heart.animate(
+
+            [
+                {
+                    transform:
+                    "translate(-50%,-50%) scale(0)",
+                    opacity: 1
+                },
+
+                {
+                    transform:
+                    `translate(
+                        calc(-50% + ${x}px),
+                        calc(-50% + ${y}px)
+                    )
+                    scale(1.3)`,
+
+                    opacity: 0
+                }
+            ],
+
+            {
+                duration:
+                    1000 +
+                    Math.random() * 700,
+
+                easing:
+                    "cubic-bezier(.2,.8,.2,1)"
+            }
+
+        );
+
+        document.body.appendChild(
+            heart
+        );
+
+        setTimeout(
+            () => heart.remove(),
+            1800
+        );
+    }
+}
+
+</script>
+
+</body>
+</html>
+
